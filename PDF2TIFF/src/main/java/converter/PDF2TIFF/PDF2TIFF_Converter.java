@@ -67,9 +67,11 @@ public class PDF2TIFF_Converter {
 	
 	public static void main(String[] args) {
 		try {
+			System.out.println("Program Start...");
 			String pdfFile = "C:\\projects\\clive\\eclipse-workspace\\pdf2tiff\\PDF2TIFF\\temp\\efx.pdf";
 			String tifFile = "C:\\projects\\clive\\eclipse-workspace\\pdf2tiff\\PDF2TIFF\\temp\\efx.tif";			
 			PDF2TIFF_Converter.convert(pdfFile, tifFile);
+			System.out.println("Tif generated successfully.");			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

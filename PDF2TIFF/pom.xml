@@ -39,4 +39,31 @@
 		</dependency>
 
 	</dependencies>
+	
+	<build>
+        <plugins>
+        	<!--  	
+        		How to Create an Executable JAR with Maven
+        		https://www.baeldung.com/executable-jar-with-maven  
+        	-->
+        	<plugin>
+			    <groupId>org.springframework.boot</groupId>
+			    <artifactId>spring-boot-maven-plugin</artifactId>
+			    <executions>
+			        <execution>
+			            <goals>
+			                <goal>repackage</goal>
+			            </goals>
+			            <configuration>
+			                <classifier>spring-boot</classifier>
+			                <mainClass>
+			                  converter.PDF2TIFF.PDF2TIFF_Converter
+			                </mainClass>
+			            </configuration>
+			        </execution>
+			    </executions>
+			</plugin>
+		</plugins>
+	</build>
+	
 </project>
